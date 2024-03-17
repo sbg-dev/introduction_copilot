@@ -4,42 +4,107 @@ theme: gradient
 paginate: true
 size: 16:9
 class: blue
-footer: Raoul Nodtrott & Sebastian Gnip
+author: Raoul Nodtrott & Sebastian Gnip
+footer: 19.03.24 - Raoul Nodtrott & Sebastian Gnip
+header: AI-Assisted Coding
 ---
-# 🚀 Introduction to AI-Assisted Coding
+
+<!-- _header: "" -->
+
+# 🚀 AI-Assisted Coding an introduction
+### by Raoul Nodtrott & Sebastian Gnip
+### using GitHub Copilot
+
+<!-- _footer: "" -->
+<!-- _paginate: fasle -->
 
 ---
 
 ## Agenda
 
-1. 🎯 Introduction to AI-assisted coding [30 - 45 min]
-2. 💡 Facts and statistics
-4. 🌐 Alternatives
-5. 🎉 Conclusion
+1. :technologist: Introduction to AI-assisted coding [30 - 45 min]
+2. 📊 Facts and statistics
+3. 🌐 Alternatives
+4. 💰 Pricing
+5. :speech_balloon: Discussion and Q&A
 
 ---
-# Live Demo
-[https://github.com/sbg-dev/introduction_copilot](https://github.com/sbg-dev/introduction_copilot)
+# Live Demo :technologist:
 
+- Does this increase productivity?
+- Will this reduce errors and bugs?
+- Will you learn faster and onboard new developers faster?
+- Will this enhance code quality and consistency?
+
+<!-- Notes:
+Please note your questions and we will answer the later.
+
+1. chat-based assistance
+2. code autocomplete
+3. comments to give context
+4. inline chat
+5. commands/context
+
+-->
 ---
 
 # 📖 Summarize live demo
 
-- AI-powered code autocomplete
-- Inline chat
+- code autocomplete
+- inline chat
 - chat-based assistance
 - commands/context
 
 ---
 
-## 💡 Advantages for Developers
+# 📊 Facts and statistics about Copilot
 
-- ⏱️ Increased productivity
-- 🐛 Reduced errors and bugs
-- 🎓 Faster learning and onboarding
-- 🏆 Enhanced code quality and consistency
+- Copilot is trained continuously on public code from GitHub and other sources
+  - It includes our Basler Product Documentation
+- Copilot analyzes the context in the editor, including open files and dependencies, to generate suggestions probabilistically
+  - without copying code
 
 ---
+<!-- _header: "" -->
+# :scientist: Study about Copilot
+![height:500 center](./.assets/Copilot_Study.png)
+<!-- _footer: "https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/" -->
+
+---
+
+# 🌐 Alternatives
+
+- Codeium
+- Tabnine
+- CodeWhisperer (Amazon)
+- ML-enhanced code completion (Google)
+- ChatGPT
+
+[9 Free and Paid GitHub Copilot alternatives in 2024](https://www.tabnine.com/blog/github-copilot-alternatives/)
+
+---
+
+# 💰 Pricing
+
+- Copilot Individual 10$ per month (not for Business use)
+- Copilot Business 19$ per month
+- Copilot Enterprise 39$ per month
+
+---
+
+# References
+
+Sample code: [https://github.com/sbg-dev/introduction_copilot](https://github.com/sbg-dev/introduction_copilot)
+Copilot: [https://copilot.github.com](https://copilot.github.com)
+Quickstart GitHub Colipot: [https://docs.github.com/de/copilot/quickstart](https://docs.github.com/de/copilot/quickstart)
+Codeium: [https://codeium.com/](https://codeium.com/)
+ChatGPT: [https://chat.openai.com](https://chat.openai.com/)
+
+---
+
+ # Discussion and Q&A :thought_balloon:
+
+<!-- Notes:
 
 GitHub Copilot is used by over 1 million individual developers and tens of thousands of businesses, including over 50,000 paying business customers. 
 
@@ -56,8 +121,6 @@ The Copilot Trust Center describes GitHub's commitments to privacy, such as excl
 Regular blog posts provide information on Copilot research, customer stories, and AI trends for developers.
 
 The overall goal of Copilot is to help developers code happier and faster by automating routine tasks and providing context-aware assistance.
-
----
 
 - Copilot is trained continuously on public code from GitHub and other sources to improve its suggestions over time. However, it does not directly copy or store code.
 
@@ -76,3 +139,4 @@ The overall goal of Copilot is to help developers code happier and faster by aut
 - GitHub offers professional services like guided workshops to help organizations adopt Copilot and maximize its benefits.
 
 - The Copilot product is continually expanding to more languages, platforms, and use cases based on customer and market feedback.
+-->
