@@ -14,5 +14,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # add the executable
 add_library(MyLibrary src/settings.cpp src/settings.h)
 target_link_libraries(MyLibrary CONAN_PKG::nlohmann_json)
+target_include_directories(MyLibrary PRIVATE ${CONAN_INCLUDE_DIRS})
 add_executable(MyProject src/main.cpp)
 target_link_libraries(MyProject MyLibrary)
