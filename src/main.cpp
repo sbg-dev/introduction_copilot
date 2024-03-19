@@ -2,34 +2,21 @@
 #include "settings.h"
 
 int main() {
-    // Test the settings class
     Settings settings;
-    settings.setInt("intSetting", 5);
-    int value = settings.getInt("intSetting");
-    std::cout << (value == 5) << std::endl;
+    settings.setInt("width", 800);
+    assert(settings.getInt("width") == 800);
+    settings.setBool("fullscreen", true);
+    assert(settings.getBool("fullscreen") == true);
+    settings.setString("title", "My Game");
+    assert(settings.getString("title") == "My Game");
+    settings.save("settings.json");
 
-    // Test if exceptions are thrown
-    try {
-        settings.getInt("nonExistentSetting");
-    } catch (const std::runtime_error& e) {
-        std::cout << (std::string(e.what()) == "Setting not found") << std::endl;
-    }
-
-    // Test serialization
-    const std::string serialized = settings.serialize();
-    std::cout << (serialized == "{\"intSetting\":5}") << std::endl;
-
-    // Test deserialization
     Settings settings2;
-    settings2.deserialize(serialized);
-    std::cout << (settings2.getInt("intSetting") == 5) << std::endl;
+    settings2.load("settings.json");
+    assert(settings2.getInt("width") == 800);
+    assert(settings2.getBool("fullscreen") == true);
+    assert(settings2.getString("title") == "My Game");
 
-    // Test write to file
-    settings2.saveToFile("settings.json");
-
-    // Test read from file
-    Settings settings3;
-    settings3.loadFromFile("settings.json");
-    std::cout << (settings3.getInt("intSetting") == 5) << std::endl;
+    assert(settings2.toJson() == settings.toJson());
     return 0;
 }

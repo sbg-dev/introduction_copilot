@@ -1,103 +1,74 @@
 #pragma once
 #include <string>
 
-/*!
-    \brief Class for storing settings of different types
-    \code{.cpp}
-    // Example usage
-    Settings settings;
-    settings.setInt("intSetting", 5);
-    int value = settings.getInt("intSetting");
-    assert(value == 5);
+/*
+The settings class can be used to store integers, bools and strings under a key.
+The settings class can be used to save settings in the json format on disk.
+The settings class uses the pimpl idiom to hide the implementation details.
+The settings class uses nlohmann json to parse and serialize the settings.
 
-    const std::string serialized = settings.serialize();
-    fuction to save serialized string to file
-    \endcode
+Example:
+Settings settings;
+settings.setInt("width", 800);
+assert(settings.getInt("width") == 800);
+settings.setBool("fullscreen", true);
+assert(settings.getBool("fullscreen") == true);
+settings.setString("title", "My Game");
+assert(settings.getString("title") == "My Game");
+settings.save("settings.json");
+
+Settings settings2;
+settings2.load("settings.json");
+assert(settings2.getInt("width") == 800);
+assert(settings2.getBool("fullscreen") == true);
+assert(settings2.getString("title") == "My Game");
+
+assert(settings2.toJson() == settings.toJson());
 */
 class Settings
 {
-    public:
-        /*!
-            \brief Constructor
-        */
-        Settings();
+public:
+    Settings();
+    ~Settings();
 
-        /*!
-            \brief Destructor
-        */
-        ~Settings();
+    /**
+     * @brief Set the value of the key to the given integer.
+     * @param key The key to set.
+     * @param value The value to set.
+     * @threading This function is not thread safe.
+     * @error This function does not throw exceptions.
+    */
+    void setInt(const std::string& key, int value);
+    int getInt(const std::string& key, int defaultValue = 0) const;
 
-        /*!
-            \brief Set integer setting
-            \param name Setting name
-            \param value Setting value
-        */
-        void setInt(const std::string& name, int value);
+    /**
+     * @brief Set the value of the key to the given boolean.
+     * @param key The key to set.
+     * @param value The value to set.
+     * @pre The key must be a valid string.
+     * @threading This function is not thread safe.
+     * @error This function does not throw exceptions.
+    */
+    void setBool(const std::string& key, bool value);
+    bool getBool(const std::string& key, bool defaultValue = false) const;
 
-        /*!
-            \brief Get integer setting
-            \param name Setting name
-            \error Throws exception if setting does not exist
-            \return Setting value
-        */
-        int getInt(const std::string& name);
+    /**
+     * @brief Set the value of the key to the given string.
+     * @param key The key to set.
+     * @param value The value to set.
+     * @pre The key must be a valid string.
+     * @threading This function is not thread safe.
+     * @error This function does not throw exceptions.
+    */
+    void setString(const std::string& key, const std::string& value);
+    std::string getString(const std::string& key, const std::string& defaultValue = "") const;
 
-        /*!
-            \brief Set string setting
-            \param name Setting name
-            \param value Setting value
-        */
-        void setString(const std::string& name, const std::string& value);
+    void save(const std::string& filename) const;
+    void load(const std::string& filename);
 
-        /*!
-            \brief Get string setting
-            \param name Setting name
-            \error Throws exception if setting does not exist
+    std::string toJson() const;
 
-            \return Setting value
-        */
-        std::string getString(const std::string& name);
-
-        /*!
-            \brief Set boolean setting
-            \param name Setting name
-            \param value Setting value
-        */
-        void setBool(const std::string& name, bool value);
-
-        /*!
-            \brief Get boolean setting
-            \param name Setting name
-            \error Throws exception if setting does not exist
-            \return Setting value
-        */
-        bool getBool(const std::string& name);
-
-        /*!
-            \brief Serialize settings to string
-            \return Serialized settings
-        */
-        std::string serialize() const;
-
-        /*!
-            \brief Deserialize settings from string
-            \param serialized Serialized settings
-        */
-        void deserialize(const std::string& serialized);
-
-        /*!
-            \brief Save settings to file
-            \param filename File name
-        */
-        void saveToFile(const std::string& filename) const;
-
-        /*!
-            \brief Load settings from a file
-            \param filename Name of the file to load settings from
-            \throw std::runtime_error If the file cannot be opened or read
-        */
-        void loadFromFile(const std::string& filename);
-    private:
-        class Impl;
-        Impl* m_pImpl;
+private:
+    class Impl;
+    Impl* mImpl;
 };
