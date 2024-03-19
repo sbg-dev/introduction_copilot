@@ -4,15 +4,15 @@ theme: gradient
 paginate: true
 size: 16:9
 class: blue
-author: Raoul Nodtrott & Sebastian Gnip
-footer: 19.03.24 - Raoul Nodtrott & Sebastian Gnip
+author: Raoul Nottrott & Sebastian Gnip
+footer: 19.03.24 - Raoul Nottrott & Sebastian Gnip
 header: AI-Assisted Coding
 ---
 
 <!-- _header: "" -->
 
 # 🚀 AI-Assisted Coding an introduction
-### by Raoul Nodtrott & Sebastian Gnip
+### by Raoul Nottrott & Sebastian Gnip
 ### using GitHub Copilot
 
 <!-- _footer: "" -->
