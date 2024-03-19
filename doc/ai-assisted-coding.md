@@ -37,36 +37,50 @@ header: AI-Assisted Coding
 - Will this enhance code quality and consistency?
 
 <!-- Notes:
-Please note your questions and we will answer the later.
-
-1. chat-based assistance
-2. code autocomplete
-3. comments to give context
-4. inline chat
-5. commands/context
-
+Please note: This is a live demo and the results may vary.
+Questions: feel free to ask questions during the live demo.
 -->
 ---
 
 # 📖 Summarize live demo
 
-- code autocomplete
-- inline chat
-- chat-based assistance
-- commands/context
+---
+## Chat-Based assistance
+
+![bg right height:700](./.assets/chat.png)
+
+---
+## Code completion
+
+![bg right height:500](.assets/code_completion.png)
+
+---
+
+## Inline chat
+
+![bg right:60% width:800](.assets/inline_chat.png)
+
+---
+
+## Commands/Context
+
+![bg right:55% height:400](.assets/commands.png)
 
 ---
 
 # 📊 Facts and statistics about Copilot
 
-- Copilot is trained continuously on public code from GitHub and other sources
-  - It includes our Basler Product Documentation
-- Copilot analyzes the context in the editor, including open files and dependencies, to generate suggestions probabilistically
-  - without copying code
+* Copilot is trained continuously on public code from GitHub and other sources
+  * It includes our Basler Product Documentation 😁
+* Copilot analyzes the context in the editor
+  * include open files and dependencies
+  * generate suggestions probabilistically
+  * ❗ without copying local code
 
 ---
 <!-- _header: "" -->
-# :scientist: Study about Copilot
+
+# :scientist: Study about GitHub Copilot
 ![height:500 center](./.assets/Copilot_Study.png)
 <!-- _footer: "https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/" -->
 
@@ -74,31 +88,32 @@ Please note your questions and we will answer the later.
 
 # 🌐 Alternatives
 
-- Codeium
+- **Codeium**
 - Tabnine
 - CodeWhisperer (Amazon)
 - ML-enhanced code completion (Google)
-- ChatGPT
+- **ChatGPT** (OpenAI)
+- **Copilot** (Microsoft)
 
 [9 Free and Paid GitHub Copilot alternatives in 2024](https://www.tabnine.com/blog/github-copilot-alternatives/)
 
+<!-- Notes: 
+Codeium is a code completion tool that uses AI to provide suggestions and automate repetitive tasks. It is available as a plugin for popular IDEs like Visual Studio Code and JetBrains.
+- Some file types are not supported by Codeium, such as .json, .yml, and .md. It also has limited support for languages like Python and JavaScript.
+
+Tabnine is an AI-powered code completion tool that integrates with popular IDEs like Visual Studio Code, JetBrains, and Atom. It uses a deep learning model to provide context-aware suggestions and automate repetitive tasks.
+
+CodeWhisperer is an AI-powered code completion tool that uses machine learning to provide context-aware suggestions and automate repetitive tasks. It is available as a plugin for popular IDEs like Visual Studio Code and JetBrains.
+
+ML-enhanced code completion is a feature in Google's Cloud Code IDE extension that uses machine learning to provide context-aware suggestions and automate repetitive tasks. It is available as a plugin for popular IDEs like Visual Studio Code and JetBrains.
+-->
 ---
 
-# 💰 Pricing
+# 💰 Pricing for GitHub Copilot
 
-- Copilot Individual 10$ per month (not for Business use)
-- Copilot Business 19$ per month
-- Copilot Enterprise 39$ per month
-
----
-
-# References
-
-Sample code: [https://github.com/sbg-dev/introduction_copilot](https://github.com/sbg-dev/introduction_copilot)
-Copilot: [https://copilot.github.com](https://copilot.github.com)
-Quickstart GitHub Colipot: [https://docs.github.com/de/copilot/quickstart](https://docs.github.com/de/copilot/quickstart)
-Codeium: [https://codeium.com/](https://codeium.com/)
-ChatGPT: [https://chat.openai.com](https://chat.openai.com/)
+- Copilot Individual 10$ a month/user (not for Business use)
+- Copilot Business 19$ a month/user
+- Copilot Enterprise 39$ a month/user
 
 ---
 
@@ -140,3 +155,11 @@ The overall goal of Copilot is to help developers code happier and faster by aut
 
 - The Copilot product is continually expanding to more languages, platforms, and use cases based on customer and market feedback.
 -->
+
+---
+
+# References
+
+Sample code: [https://github.com/sbg-dev/introduction_copilot](https://github.com/sbg-dev/introduction_copilot)
+GitHub Copilot: [https://copilot.github.com](https://copilot.github.com)
+Quickstart GitHub Colipot: [https://docs.github.com/de/copilot/quickstart](https://docs.github.com/de/copilot/quickstart)
